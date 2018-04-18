@@ -1,0 +1,89 @@
+{% extends layout %}
+{% block content %}
+<main>
+	<section class="section section--bg-intro">
+		<div class="container">
+			<div class="intro">
+				<div class="intro__item section__content">
+					<h1 class="intro__title">Бизнес.IoT<span>Онлайн-конференция Microsoft</span></h1>
+					<p class="text text--color-blue">Открывая интернет вещей<span>30 марта 2017, 10:00</span></p>
+					<a href="#" class="btn">Регистрация</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section section--bg-blue">
+		<div class="container">
+			<div class="subjects">
+				<div class="subjects__item section__content">
+					<p class="subjects__text">Тенденции и практики интернета вещей для цифровой трансформации бизнеса</p>
+					<a href="#" class="subjects__link">Подробнее</a>
+				</div>
+				<div class="subjects__item section__content">
+					<p class="subjects__text">Готовые решения для задач: рекомендации, опыт, оценка, эффективность</p>
+					<a href="#" class="subjects__link">Подробнее</a>
+				</div>
+				<div class="subjects__item section__content">
+					<p class="subjects__text">Разработка решений IoT: все&nbsp;о&nbsp;платформе, компонентах и сервисах</p>
+					<a href="#" class="subjects__link">Подробнее</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="program">
+				<h2 class="title">Программа</h2>
+				<h3 class="program__subtitle">Пленарная сессия 30 марта 2017</h3>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<section class="speakers">
+				<h2 class="title">Спикеры</h2>
+				<div class="speakers__wrapper">
+				{% for item in common.data.speakers %}
+				<div class="speaker">
+					<img src="{{ item.img | img_asset }}" class="speaker__photo" alt="Фото спикера">
+					<div class="speaker__info">
+					<div class="speaker__name">{{item.name}}</div>
+					<div class="speaker__function">{{item.function}}</div>
+					<div class="speaker__subject">{{item.subject}}</div>
+				</div>
+				</div>
+				{% endfor %}
+				</div>
+			</section>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<section class="partners">
+				<h2 class="title">Партнерские решения</h2>
+				<div class="partners__wrapper">
+					{% for item in common.data.partners %}
+					<div class="partner">
+						<div class="partner__logo">
+							<img src="{{ item.img | img_asset }}" alt="Логотип партнера">
+						</div>
+						<div class="partner__info">
+							<div class="partner__text">{{item.text}}</div>
+							<a href="#">Подробнее</a>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</section>
+		</div>
+	</section>
+	<section class="section section--bg-blue">
+		<div class="container">
+			<div class="profits">
+				<p class="profits__text">Онлайн-конференция «Бизнес.IoT» даст эффективный стимул преобразованию вашего бизнеса, созданию новых решений и сервисов. Присоединяйтесь!</p>
+				<a href="#" class="btn">Регистрация</a>
+			</div>
+		</div>
+	</section>
+</main>
+{% endblock %}

@@ -1,0 +1,37 @@
+.subjects{
+	display: flex;
+	justify-content: space-between;
+	min-height: 369px;
+	text-align: center;
+	padding-top: 65px;
+
+	&__item {
+		min-height: 135px;
+		font-size: 20px;
+		font-weight: 300;
+		padding-top: 100px;
+		background-position: top;
+		background-repeat: no-repeat;
+
+		&:nth-child(1) {
+			background-image: url('/images/subjects/subjects1.png');
+		}
+
+		&:nth-child(2) {
+			background-image: url('/images/subjects/subjects2.png');
+		}
+
+		&:nth-child(3) {
+			background-image: url('/images/subjects/subjects3.png');
+		}
+	}
+
+	&__text {
+		margin-bottom: 40px;
+	}
+
+	&__link {
+		font-size: 18px;
+		color: @blue;
+	}
+}

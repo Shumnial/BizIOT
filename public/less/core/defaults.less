@@ -1,0 +1,28 @@
+// this file for the defaults styles, such as <body> or <a> for example...
+html {
+	font-size: @base-font-size;
+}
+
+body {
+	font-family: @base-font;
+	color: @white;
+	background-color: @darkblue;
+	line-height: @base-line-height;
+	font-style: normal;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: @base-box-model;
+}
+
+div, section, p, header, footer, main {
+	outline: 1px solid red;
+}

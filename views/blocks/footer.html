@@ -1,0 +1,23 @@
+<footer class="footer">
+	<div class="footer__main">
+		{% for item in common.data.footerLinks %}
+		<div class="footer__content">
+			<h3 class="footer__title">{{item.title}}</h3>
+			{% for link in item.links %}
+			<a class="footer__item" href="{{link.url}}">{{link.text}}</a>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+	<div class="footer__additional">
+		<p class="lang">Русский (Россия)</p>
+		<div class="help-links">
+			<a href="#">Контактная информация</a>
+			<a href="#">Конфиденциальность</a>
+			<a href="#">Условия использования</a>
+			<a href="#">Товарные знаки</a>
+			<a href="#">Сведения о рекламе</a>
+			<a href="#">© 2017 Microsoft </a>
+		</div>
+	</div>
+</footer>
