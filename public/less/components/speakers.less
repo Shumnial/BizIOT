@@ -1,4 +1,5 @@
 .speakers{
+	position: relative;
 	overflow: hidden;
 	padding-bottom: 100px;
 
@@ -13,6 +14,14 @@
 		background-color: @white;
 		margin-right: 35px;
 		overflow: hidden;
+
+		@media (max-width: @screen-lg) {
+			margin-right: 20px;
+		}
+
+		@media (max-width: @screen-md) {
+			margin-right: 119px;
+		}
 
 		&__info {
 			padding: 20px;
@@ -40,6 +49,10 @@
 		&__subject {
 			font-size: 14px;
 			color: #008ad0;
+			padding-left: 40px;
+			background-image: url('/images/microphone.png');
+			background-repeat: no-repeat;
+			max-width: 240px;
 		}
 	}
 }

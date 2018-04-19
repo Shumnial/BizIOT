@@ -1,4 +1,5 @@
 .partners{
+	position: relative;
 	overflow: hidden;
 	padding-bottom: 100px;
 
@@ -12,6 +13,14 @@
 		width: 300px;
 		margin-right: 35px;
 		background-color: @white;
+
+		@media (max-width: @screen-lg) {
+			margin-right: 20px;
+		}
+
+		@media (max-width: @screen-md) {
+			margin-right: 119px;
+		}
 
 		&__info {
 			padding: 0 20px;

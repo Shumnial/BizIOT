@@ -1,21 +1,38 @@
 .footer{
-	padding: 25px 160px;
+	padding: 25px 10%;
 	background-color: @white;
 	color: #231f20;
+
+	@media (max-width: @screen-lg) {
+		padding: 25px 40px;
+	}
 
 	&__main {
 		display: flex;
 		justify-content: space-between;
-	}
+		margin-bottom: 20px;
 
-	&__additional {
-		display: flex;
-		justify-content: space-between;
+		@media (max-width: @screen-lg) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__content {
-		min-width: 120px;
-		max-width: 300px;
+		flex-basis: 15%;
+
+		@media (max-width: @screen-lg) {
+			max-width: none;
+			flex-basis: 30%;
+			margin-bottom: 20px;
+		}
+
+		@media (max-width: @screen-md) {
+			flex-basis: 45%;
+		}
+
+		@media (max-width: @screen-sm) {
+			flex-basis: 40%;
+		}
 	}
 
 	&__title {
@@ -30,5 +47,9 @@
 
 	a {
 		color: #231f20;
+
+		&:hover {
+			color: @blue;
+		}
 	}
 }

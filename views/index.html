@@ -4,7 +4,7 @@
 	<section class="section section--bg-intro">
 		<div class="container">
 			<div class="intro">
-				<div class="intro__item section__content">
+				<div class="intro__item">
 					<h1 class="intro__title">Бизнес.IoT<span>Онлайн-конференция Microsoft</span></h1>
 					<p class="text text--color-blue">Открывая интернет вещей<span>30 марта 2017, 10:00</span></p>
 					<a href="#" class="btn">Регистрация</a>
@@ -35,11 +35,46 @@
 			<div class="program">
 				<h2 class="title">Программа</h2>
 				<h3 class="program__subtitle">Пленарная сессия 30 марта 2017</h3>
+				<div class="event">
+
+					<div class="event__item">
+						<p class="event__time">10:00 — 11:15</p>
+						<div class="event__info event__info--col-one">
+							<div class="event__subject">Интернет вещей в действии: мировая и российская практика.</div>
+							<div class="event__speaker">Дмитрий Марченко, Директор по маркетингу облачной платформы Microsoft в России</div>
+						</div>
+					</div>
+
+					<div class="event__item">
+						<div class="event__time">11:15 — 11:30</div>
+						<div class="event__info event__info--col-one">
+							<div class="event__subject">Интернет вещей и анализ данных. Международные проекты КПМГ.</div>
+							<div class="event__speaker">Василий Есипов, Старший менеджер КПМГ</div>
+						</div>
+					</div>
+
+					<div class="event__item">
+						<div class="event__time">11:30 — 11:40</div>
+						<div class="event__info event__info--col-two">
+							<div class="event__subject event__subject--pro">Трек PRO.Бизнес Ищете возможности роста для своего бизнеса? Нужны инновационные, но проверенные решения? Данный трек – про это. Бизнес, новые идеи, сценарии и решения, практика применения и результаты – в различных отраслях</div>
+							<div class="event__speaker event__speaker--pro">Модератор: Анна Кулашова, Директор директор департамента по работе с малыми и средними организациями и партнерами Microsoft в России</div>
+						</div>
+						<div class="event__info event__info--col-two">
+							<div class="event__subject event__subject--pro">Трек PRO.Технологии Есть идея, но нет понимания как ее реализовать? Нужен совет во выбору инструментов, архитектуре и необходимым компонентам? Этот трек для вас. Технологическая платформа Microsoft, компонентная база и услуги наших партнеров, программы инкубации решений – все для быстрого запуска проекта</div>
+							<div class="event__speaker event__speaker--pro">Модератор: Михаил Черномордиков, Директор департамента стратегических технологий Microsoft в России</div>
+						</div>
+					</div>
+
+					<div class="event__item">
+						<div class="event__time">11:40 — 12:00</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</section>
 	<section class="section">
-		<div class="container">
+		<div class="container container--relative">
 			<section class="speakers">
 				<h2 class="title">Спикеры</h2>
 				<div class="speakers__wrapper">
@@ -54,11 +89,20 @@
 				</div>
 				{% endfor %}
 				</div>
+				<div class="controls">
+					<button class="controls__item controls__item--active"></button>
+					<button class="controls__item"></button>
+					<button class="controls__item"></button>
+				</div>
 			</section>
+			<div class="arrows">
+				<button class="arrows__item arrows__item--left"></button>
+				<button class="arrows__item arrows__item--right"></button>
+			</div>
 		</div>
 	</section>
 	<section class="section">
-		<div class="container">
+		<div class="container container--relative">
 			<section class="partners">
 				<h2 class="title">Партнерские решения</h2>
 				<div class="partners__wrapper">
@@ -74,14 +118,25 @@
 					</div>
 					{% endfor %}
 				</div>
+				<div class="controls">
+					<button class="controls__item controls__item--active"></button>
+					<button class="controls__item"></button>
+					<button class="controls__item"></button>
+				</div>
 			</section>
+			<div class="arrows">
+				<button class="arrows__item arrows__item--left"></button>
+				<button class="arrows__item arrows__item--right"></button>
+			</div>
 		</div>
 	</section>
-	<section class="section section--bg-blue">
+	<section class="section section--bg-blue section--bg-profits">
 		<div class="container">
 			<div class="profits">
-				<p class="profits__text">Онлайн-конференция «Бизнес.IoT» даст эффективный стимул преобразованию вашего бизнеса, созданию новых решений и сервисов. Присоединяйтесь!</p>
-				<a href="#" class="btn">Регистрация</a>
+				<div class="profits__wrapper">
+					<p class="profits__text">Онлайн-конференция «Бизнес.IoT» даст эффективный стимул преобразованию вашего бизнеса, созданию новых решений и сервисов. Присоединяйтесь!</p>
+					<a href="#" class="btn">Регистрация</a>
+				</div>
 			</div>
 		</div>
 	</section>

@@ -1,0 +1,45 @@
+.additional {
+	display: flex;
+	justify-content: space-between;
+
+	&__lang {
+		position: relative;
+		min-width: 165px;
+		padding-left: 35px;
+
+		span svg {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			left: 0;
+			top: -4px;
+			fill: #626262;
+		}
+
+		&:hover svg {
+			fill: @blue;
+		}
+	}
+
+	&__help-links {
+		display: flex;
+		flex-wrap: wrap;
+
+		a {
+			margin-bottom: 5px;
+		}
+		a:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	@media (max-width: @screen-md) {
+		flex-direction: column;
+
+		&__lang {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			order: 1;
+		}
+	}
+}
