@@ -40,35 +40,44 @@
 					<div class="event__item">
 						<p class="event__time">10:00 — 11:15</p>
 						<div class="event__info event__info--col-one">
-							<div class="event__subject">Интернет вещей в действии: мировая и российская практика.</div>
-							<div class="event__speaker">Дмитрий Марченко, Директор по маркетингу облачной платформы Microsoft в России</div>
+							<div class="event__subject event__subject--font-size">Интернет вещей в действии: мировая и российская практика.</div>
+							<div class="event__speaker event__speaker--font-size">Дмитрий Марченко, Директор по маркетингу облачной платформы Microsoft в России</div>
 						</div>
 					</div>
 
 					<div class="event__item">
 						<div class="event__time">11:15 — 11:30</div>
 						<div class="event__info event__info--col-one">
-							<div class="event__subject">Интернет вещей и анализ данных. Международные проекты КПМГ.</div>
-							<div class="event__speaker">Василий Есипов, Старший менеджер КПМГ</div>
+							<div class="event__subject event__subject--font-size">Интернет вещей и анализ данных. Международные проекты КПМГ.</div>
+							<div class="event__speaker event__speaker--font-size">Василий Есипов, Старший менеджер КПМГ</div>
 						</div>
 					</div>
 
 					<div class="event__item">
 						<div class="event__time">11:30 — 11:40</div>
-						<div class="event__info event__info--col-two">
-							<div class="event__subject event__subject--pro">Трек PRO.Бизнес Ищете возможности роста для своего бизнеса? Нужны инновационные, но проверенные решения? Данный трек – про это. Бизнес, новые идеи, сценарии и решения, практика применения и результаты – в различных отраслях</div>
+						<div class="event__info event__info--pro event__info--col-two">
+							<div class="event__subject event__subject--pro"><div>Трек <span>PRO.Бизнес</span></div>Ищете возможности роста для своего бизнеса? Нужны инновационные, но проверенные решения? Данный трек – про это. Бизнес, новые идеи, сценарии и решения, практика применения и результаты – в различных отраслях</div>
 							<div class="event__speaker event__speaker--pro">Модератор: Анна Кулашова, Директор директор департамента по работе с малыми и средними организациями и партнерами Microsoft в России</div>
 						</div>
-						<div class="event__info event__info--col-two">
-							<div class="event__subject event__subject--pro">Трек PRO.Технологии Есть идея, но нет понимания как ее реализовать? Нужен совет во выбору инструментов, архитектуре и необходимым компонентам? Этот трек для вас. Технологическая платформа Microsoft, компонентная база и услуги наших партнеров, программы инкубации решений – все для быстрого запуска проекта</div>
+						<div class="event__info event__info--pro event__info--col-two">
+							<div class="event__subject event__subject--pro"><div>Трек <span>PRO.Технологии</span></div>Есть идея, но нет понимания как ее реализовать? Нужен совет во выбору инструментов, архитектуре и необходимым компонентам? Этот трек для вас. Технологическая платформа Microsoft, компонентная база и услуги наших партнеров, программы инкубации решений – все для быстрого запуска проекта</div>
 							<div class="event__speaker event__speaker--pro">Модератор: Михаил Черномордиков, Директор департамента стратегических технологий Microsoft в России</div>
 						</div>
 					</div>
 
+					{% for item in common.data.event %}
 					<div class="event__item">
-						<div class="event__time">11:40 — 12:00</div>
+						<div class="event__time">{{item.time}}</div>
+						{% for subjects in item.subjects %}
+						<div class="event__info event__info--col-two">
+							<div class="event__subject">{{subjects.text}}</div>
+								{% for speakers in subjects.speakers %}
+								<div class="event__speaker">{{speakers.name}}</div>
+							{% endfor %}
+						</div>
+						{% endfor %}
 					</div>
-
+					{% endfor %}
 				</div>
 			</div>
 		</div>
@@ -77,35 +86,26 @@
 		<div class="container container--relative">
 			<section class="speakers">
 				<h2 class="title">Спикеры</h2>
-				<div class="speakers__wrapper">
-				{% for item in common.data.speakers %}
-				<div class="speaker">
-					<img src="{{ item.img | img_asset }}" class="speaker__photo" alt="Фото спикера">
-					<div class="speaker__info">
-					<div class="speaker__name">{{item.name}}</div>
-					<div class="speaker__function">{{item.function}}</div>
-					<div class="speaker__subject">{{item.subject}}</div>
-				</div>
-				</div>
+				<div class="slider">
+					{% for item in common.data.speakers %}
+					<div class="speaker">
+						<img src="{{ item.img | img_asset }}" class="speaker__photo" alt="Фото спикера">
+						<div class="speaker__info">
+							<div class="speaker__name">{{item.name}}</div>
+							<div class="speaker__function">{{item.function}}</div>
+							<div class="speaker__subject">{{item.subject}}</div>
+						</div>
+					</div>
 				{% endfor %}
-				</div>
-				<div class="controls">
-					<button class="controls__item controls__item--active"></button>
-					<button class="controls__item"></button>
-					<button class="controls__item"></button>
-				</div>
-			</section>
-			<div class="arrows">
-				<button class="arrows__item arrows__item--left"></button>
-				<button class="arrows__item arrows__item--right"></button>
 			</div>
+			</section>
 		</div>
 	</section>
 	<section class="section">
 		<div class="container container--relative">
 			<section class="partners">
 				<h2 class="title">Партнерские решения</h2>
-				<div class="partners__wrapper">
+				<div class="slider">
 					{% for item in common.data.partners %}
 					<div class="partner">
 						<div class="partner__logo">
@@ -118,16 +118,7 @@
 					</div>
 					{% endfor %}
 				</div>
-				<div class="controls">
-					<button class="controls__item controls__item--active"></button>
-					<button class="controls__item"></button>
-					<button class="controls__item"></button>
-				</div>
 			</section>
-			<div class="arrows">
-				<button class="arrows__item arrows__item--left"></button>
-				<button class="arrows__item arrows__item--right"></button>
-			</div>
 		</div>
 	</section>
 	<section class="section section--bg-blue section--bg-profits">

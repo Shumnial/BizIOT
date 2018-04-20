@@ -1,18 +1,28 @@
 .additional {
+	max-width: 100%;
+	position: relative;
 	display: flex;
 	justify-content: space-between;
+	
+	
 
 	&__lang {
+		display: flex;
+		align-items: center;
 		position: relative;
-		min-width: 165px;
-		padding-left: 35px;
+		flex-basis: 30%;
+		padding-left: 30px;
+		
+		
 
 		span svg {
 			position: absolute;
 			width: 30px;
 			height: 30px;
 			left: 0;
-			top: -4px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
 			fill: #626262;
 		}
 
@@ -22,24 +32,47 @@
 	}
 
 	&__help-links {
-		display: flex;
-		flex-wrap: wrap;
+		flex-basis: 70%;
+		
 
 		a {
+			display: inline-block;
+			margin-right: 10px;
 			margin-bottom: 5px;
 		}
 		a:not(:last-child) {
-			margin-right: 20px;
+			
 		}
 	}
 
 	@media (max-width: @screen-md) {
-		flex-direction: column;
+		
 
 		&__lang {
 			padding-top: 10px;
 			padding-bottom: 10px;
-			order: 1;
+			
 		}
 	}
+
+	@media (max-width: @screen-sm) {
+		flex-direction: column;
+
+		&__help-links {
+			display: flex;
+			flex-wrap: wrap;
+			flex-basis: auto;
+
+			a:nth-child(1n) {
+				
+				margin: 0;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__lang {
+			margin-bottom: 10px;
+		}
+	}
+
 }

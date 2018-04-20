@@ -4,7 +4,11 @@
 	color: #231f20;
 
 	@media (max-width: @screen-lg) {
-		padding: 25px 40px;
+		padding: 25px 8%;
+	}
+
+	@media (max-width: @screen-sm) {
+		padding: 25px 15px;
 	}
 
 	&__main {
@@ -14,6 +18,11 @@
 
 		@media (max-width: @screen-lg) {
 			flex-wrap: wrap;
+		}
+
+		@media (max-width: @screen-sm) {
+			flex-wrap: nowrap;
+			flex-direction: column;
 		}
 	}
 
@@ -37,6 +46,7 @@
 
 	&__title {
 		font-size: 18px;
+		font-weight: 700;
 		margin-bottom: 20px;
 	}
 
