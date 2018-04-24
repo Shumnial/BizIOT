@@ -1,0 +1,74 @@
+[
+	{
+		"id": "s-osipov",
+		"img": "s-osipov.jpg",
+		"name": "Сергей Осипов",
+		"function": "Вице-президент MAYKOR-GMCS"
+	},
+	{
+		"id": "m-chernomordikov",
+		"img": "m-chernomordikov.jpg",
+		"name": "Михаил Черномордиков",
+		"function": "Директор департамента стратегических технологий Microsoft в России"
+	},
+	{
+		"id": "d-bergelson",
+		"img": "d-bergelson.jpg",
+		"name": "Дмитрий Бергельсон",
+		"function": "Партнер GuaranaCam"
+	},
+	{
+		"id": "a-kulashova",
+		"img": "a-kulashova.jpg",
+		"name": "Анна Кулашова",
+		"function": "Директор департамента по работе с малыми и средними организациями и партнерами Microsoft в России"
+	},
+	{
+		"id":"d-marchenko",
+		"img": "d-marchenko.jpg",
+		"name": "Дмитрий Марченко",
+		"function": "Директор по маркетингу облачной платформы Microsoft в России"
+	},
+	{
+		"id": "a-meluzov",
+		"img": "a-meluzov.jpg",
+		"name": "Андрей Мелузов",
+		"function": "Директор по развитию бизнеса, ГК «КОРУС Консалтинг»"
+	},
+	{
+		"id": "v-esipov",
+		"img": "v-esipov.jpg",
+		"name": "Василий Есипов",
+		"function": "Старший менеджер КПМГ"
+	},
+	{
+		"id": "a-glytenko",
+		"name": "Глытенко Александр",
+		"function": "Генеральный директор"
+	},
+	{
+		"id": "a-doronin",
+		"name": "Доронин Александр",
+		"function": "Технический директор, SMB Cloud Technologies"
+	},
+	{
+		"id": "a-kuznecov",
+		"name": "Кузнецов Алексей",
+		"function": "Заместитель генерального директора"
+	},
+	{
+		"id": "v-milykh",
+		"name": "Милых Валерий",
+		"function": "Директор департамента АО \"Компонента\""
+	},
+	{
+		"id": "k-abramov",
+		"name": "Кирилл Абрамов",
+		"function": "Директор по развитию AddRealty"
+	},
+	{
+		"id": "l-koroleva",
+		"name": "Людмила Королева",
+		"function": "Директор департамента, Star Europe"
+	}
+]

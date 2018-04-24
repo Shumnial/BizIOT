@@ -1,49 +1,5 @@
 {
 	"title": "Заголовок страницы",
-	"speakers": [
-		{
-			"img": "s-osipov.jpg",
-			"name": "Сергей Осипов",
-			"function": "Вице-президент MAYKOR-GMCS, дирекция розничных решений и облачных сервисов",
-			"subject": "Розничные магазины. Повышаем эффективность вместе с технологиями Microsoft"
-		},
-		{
-			"img": "m-chernomordikov.jpg",
-			"name": "Михаил Черномордиков",
-			"function": "Директор департамента стратегических технологий Microsoft в России",
-			"subject": "PRO.Технологии и Интернет Вещей: ключевые выводы и дальнейшие действия"
-		},
-		{
-			"img": "d-bergelson.jpg",
-			"name": "Дмитрий Бергельсон",
-			"function": "Партнер GuaranaCam",
-			"subject": "Облачный сервис ритейл-аналитики на базе видеонаблюдения"
-		},
-		{
-			"img": "a-kulashova.jpg",
-			"name": "Анна Кулашова",
-			"function": "Директор департамента по работе с малыми и средними организациями и партнерами Microsoft в России",
-			"subject": "PRO.Бизнес и Интернет Вещей: ключевые выводы и дальнейшие действия"
-		},
-		{
-			"img": "d-marchenko.jpg",
-			"name": "Дмитрий Марченко",
-			"function": "Директор по маркетингу облачной платформы Microsoft в России",
-			"subject": "Интернет Вещей в действии: мировая и российская практика. Реалии, тренды, перспективы"
-		},
-		{
-			"img": "a-meluzov.jpg",
-			"name": "Андрей Мелузов",
-			"function": "Директор по развитию ГК «КОРУС Консалтинг»",
-			"subject": "Мониторинг торгового оборудования"
-		},
-		{
-			"img": "v-esipov.jpg",
-			"name": "Василий Есипов",
-			"function": "Старший менеджер КПМГ",
-			"subject": "Интернет вещей и анализ данных. Международные проекты КПМГ"
-		}
-	],
 	"partners": [
 		{
 			"img": "guaranacam.png",
@@ -64,23 +20,23 @@
 			"links": [
 				{
 					"text": "Образование",
-					"url": ""
+					"url": "https://www.microsoft.com/ru-ru/education/default.aspx"
 				},
 				{
 					"text": "Государственный сектор",
-					"url": ""
+					"url": "https://enterprise.microsoft.com/ru-ru/industries/government/#fbid=JuAXHbXOkon"
 				},
 				{
 					"text": "Здравоохранение",
-					"url": ""
+					"url": "https://enterprise.microsoft.com/ru-ru/industries/health/#fbid=JuAXHbXOkon"
 				},
 				{
 					"text": "Гостиничный бизнес и путешествие",
-					"url": ""
+					"url": "https://enterprise.microsoft.com/ru-ru/industries/hospitality-and-travel/"
 				},
 				{
 					"text": "Розничные и потребительские товары",
-					"url": ""
+					"url": "https://enterprise.microsoft.com/ru-ru/industries/retail-and-consumer-goods/"
 				}
 			]
 		},
@@ -89,15 +45,15 @@
 			"links": [
 				{
 					"text": "Для бизнеса",
-					"url": ""
+					"url": "https://www.microsoft.com/ru-ru/business/"
 				},
 				{
 					"text": "Enterprise",
-					"url": ""
+					"url": "https://enterprise.microsoft.com/ru-ru/#fbid=JuAXHbXOkon"
 				},
 				{
 					"text": "Microsoft AppSource",
-					"url": ""
+					"url": "https://appsource.microsoft.com/en-us/"
 				}
 			]
 		},
@@ -106,19 +62,19 @@
 			"links": [
 				{
 					"text": "Microsoft partner resources",
-					"url": ""
+					"url": "https://partner.microsoft.com/ru-ru"
 				},
 				{
 					"text": "Pinpoint",
-					"url": ""
+					"url": "https://pinpoint.microsoft.com/ru-ru"
 				},
 				{
 					"text": "Partner with Microsoft Azure",
-					"url": ""
+					"url": "https://azure.microsoft.com/ru-ru/community/partners/grow-your-business/"
 				},
 				{
 					"text": "Microsoft Worldwide Partner Conference",
-					"url": ""
+					"url": "https://partner.microsoft.com/ru-ru/wpc"
 				}
 			]
 		},
@@ -127,23 +83,23 @@
 			"links": [
 				{
 					"text": "Microsoft Azure",
-					"url": ""
+					"url": "https://azure.microsoft.com/ru-ru/"
 				},
 				{
 					"text": "Microsoft Visual Studio",
-					"url": ""
+					"url": "https://www.visualstudio.com/"
 				},
 				{
 					"text": "Microsoft Developer Network",
-					"url": ""
+					"url": "https://msdn.microsoft.com/ru-ru"
 				},
 				{
 					"text": "TechNet",
-					"url": ""
+					"url": "https://technet.microsoft.com/ru-ru"
 				},
 				{
 					"text": "Application Development",
-					"url": ""
+					"url": "https://technet.microsoft.com/en-us"
 				}
 			]
 		},
@@ -152,11 +108,11 @@
 			"links": [
 				{
 					"text": "Правила обеспечения конфиденциальности корпорации Майкрософт",
-					"url": ""
+					"url": "https://privacy.microsoft.com/ru-ru"
 				},
 				{
 					"text": "Образование",
-					"url": ""
+					"url": "https://www.microsoft.com/ru-ru/education"
 				}
 			]
 		},
@@ -165,225 +121,25 @@
 			"links": [
 				{
 					"text": "Карьера в Microsoft",
-					"url": ""
+					"url": "http://aka.ms/rupiicareers"
 				},
 				{
 					"text": "Microsoft",
-					"url": ""
+					"url": "https://www.microsoft.com/ru-ru/news/inside_ms.aspx"
 				},
 				{
 					"text": "Новости и публикации",
-					"url": ""
+					"url": "https://www.microsoft.com/rus/newscenter/"
 				},
 				{
 					"text": "Продукты",
-					"url": ""
+					"url": "https://www.microsoft.com/ru-ru/sitemap.aspx"
 				},
 				{
 					"text": "Политика по персональным данным",
-					"url": ""
+					"url": "http://aka.ms/ruprivacy"
 				}
 			]
 		}	
-	],
-	"event": [
-		{
-			"time": "11:40 — 12:00",
-			"subjects": [
-				{
-					"text": "Облачный сервис ритейл-аналитики на базе видеонаблюдения",
-					"speakers": [
-						{
-							"name": "Дмитрий Бергельсон, Партнер, GuaranaCam"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "12:00 — 12:20",
-			"subjects": [
-				{
-					"text": "Прогнозирование производства на базе машинного обучения",
-					"speakers": [
-						{
-							"name": "Глытенко Александр, Генеральный директор"
-						},
-						{
-							"name": "Доронин Александр, Технический директор, SMB Cloud Technologies"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "12:20 — 12:40",
-			"subjects": [
-				{
-					"text": "Сервисная платформа kSense:  от сбора данных к достоверным прогнозам и оценкам рисков",
-					"speakers": [
-						{
-							"name": "Кузнецов Алексей, Заместитель генерального директора, "
-						},
-						{
-							"name": "Милых Валерий, Директор департамента АО \"Компонента\""
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "12:40 — 13:00",
-			"subjects": [
-				{
-					"text": "Мониторинг торгового оборудования",
-					"speakers": [
-						{
-							"name": "Андрей Мелузов, Директор по развитию бизнеса, ГК «КОРУС Консалтинг»"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "13:00 — 13:20",
-			"subjects": [
-				{
-					"text": "Розничные магазины. Повышаем эффективность вместе с технологиями Microsoft",
-					"speakers": [
-						{
-							"name": "Сергей Осипов, Вице-президент MAYKOR-GMCS,"
-						},
-						{
-							"name": "Кирилл Абрамов, Директор по развитию AddRealty"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "13:20 — 13:40",
-			"subjects": [
-				{
-					"text": "Управление энергоресурсами зданий",
-					"speakers": [
-						{
-							"name": "Людмила Королева, Директор департамента, Star Europe"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "13:40 — 14:00",
-			"subjects": [
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "14:00 — 14:20",
-			"subjects": [
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				},
-				{
-					"text": "Тема и докладчики уточняются",
-					"speakers": [
-						{
-							"name": "[  –  ]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"time": "14:20 — 14:30",
-			"subjects": [
-				{
-					"text": "PRO.Бизнес и Интернет Вещей: ключевые выводы и дальнейшие действия",
-					"speakers": [
-						{
-							"name": "Анна Кулашова, Директор департамента по работе с малыми и средними организациями и партнерами Microsoft в России"
-						}
-					]
-				},
-				{
-					"text": "PRO.Технологии и Интернет Вещей: ключевые выводы и дальнейшие действия",
-					"speakers": [
-						{
-							"name": "Михаил Черномордиков, Директор департамента стратегических технологий Microsoft в России"
-						}
-					]
-				}
-			]
-		}
 	]
 }

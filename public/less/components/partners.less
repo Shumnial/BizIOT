@@ -11,14 +11,22 @@
 		}
 
 		&__logo {
+			position: relative;
 			padding: 20px;
 			height: 127px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
+			&::after {
+				content: "";
+				display: block;
+				padding-bottom: 80%;
+			}
+
 			img {
 				max-width: 100%;
+				height: auto;
 			}
 		}
 

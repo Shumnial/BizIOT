@@ -32,68 +32,63 @@
 	</section>
 	<section class="section">
 		<div class="container">
-			<div class="program">
+			<div class="program" id="program">
 				<h2 class="title">Программа</h2>
 				<h3 class="program__subtitle">Пленарная сессия 30 марта 2017</h3>
 				<div class="event">
 
-					<div class="event__item">
-						<p class="event__time">10:00 — 11:15</p>
-						<div class="event__info event__info--col-one">
-							<div class="event__subject event__subject--font-size">Интернет вещей в действии: мировая и российская практика.</div>
-							<div class="event__speaker event__speaker--font-size">Дмитрий Марченко, Директор по маркетингу облачной платформы Microsoft в России</div>
-						</div>
-					</div>
-
-					<div class="event__item">
-						<div class="event__time">11:15 — 11:30</div>
-						<div class="event__info event__info--col-one">
-							<div class="event__subject event__subject--font-size">Интернет вещей и анализ данных. Международные проекты КПМГ.</div>
-							<div class="event__speaker event__speaker--font-size">Василий Есипов, Старший менеджер КПМГ</div>
-						</div>
-					</div>
-
-					<div class="event__item">
-						<div class="event__time">11:30 — 11:40</div>
-						<div class="event__info event__info--pro event__info--col-two">
-							<div class="event__subject event__subject--pro"><div>Трек <span>PRO.Бизнес</span></div>Ищете возможности роста для своего бизнеса? Нужны инновационные, но проверенные решения? Данный трек – про это. Бизнес, новые идеи, сценарии и решения, практика применения и результаты – в различных отраслях</div>
-							<div class="event__speaker event__speaker--pro">Модератор: Анна Кулашова, Директор директор департамента по работе с малыми и средними организациями и партнерами Microsoft в России</div>
-						</div>
-						<div class="event__info event__info--pro event__info--col-two">
-							<div class="event__subject event__subject--pro"><div>Трек <span>PRO.Технологии</span></div>Есть идея, но нет понимания как ее реализовать? Нужен совет во выбору инструментов, архитектуре и необходимым компонентам? Этот трек для вас. Технологическая платформа Microsoft, компонентная база и услуги наших партнеров, программы инкубации решений – все для быстрого запуска проекта</div>
-							<div class="event__speaker event__speaker--pro">Модератор: Михаил Черномордиков, Директор департамента стратегических технологий Microsoft в России</div>
-						</div>
-					</div>
-
-					{% for item in common.data.event %}
-					<div class="event__item">
+					{% for item in event | populate(speakers) %}
+					<div class="event__item {% if item.lead %}event__item--pro{% endif %}">
+						<div class="event__line"></div>
 						<div class="event__time">{{item.time}}</div>
 						{% for subjects in item.subjects %}
-						<div class="event__info event__info--col-two">
+						<div class="event__info {% if loop.length > 1  %}event__info--col-two{% endif %}">
 							<div class="event__subject">{{subjects.text}}</div>
-								{% for speakers in subjects.speakers %}
-								<div class="event__speaker">{{speakers.name}}</div>
+							{% for one in subjects.speakers %}
+							<div class="event__speaker">{% if one.name %}{{one.name + ', '}}{% else %}[  –  ]{% endif %}{{one.function}}</div>
+
+							<div class="popup">
+								<div class="popup__inner">
+									<h2 class="popup__subject">{{subjects.text}}</h2>
+									<p class="popup__info">{{subjects.about}}</p>
+									<a class="popup__watch" href="#">Смотреть доклад</a>
+									<div class="popup__speaker">
+										<div class="popup__speaker-photo">
+											<img src="{{ one.img | default('speaker-placeholder.jpg') | img_asset }}">
+										</div>
+										<p class="popup__speaker-function">{{one.function}}</p>
+										<p class="popup__speaker-name">{{one.name}}</p>
+									</div>
+									<span class="popup__close"></span>
+								</div>
+							</div>
+
 							{% endfor %}
 						</div>
 						{% endfor %}
 					</div>
 					{% endfor %}
+
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="section">
 		<div class="container container--relative">
-			<section class="speakers">
+			<section class="speakers" id="speakers">
 				<h2 class="title">Спикеры</h2>
 				<div class="slider">
-					{% for item in common.data.speakers %}
+					{% for item in speakers | populate_speakers(event) %}
 					<div class="speaker">
-						<img src="{{ item.img | img_asset }}" class="speaker__photo" alt="Фото спикера">
+						<div class="speaker__photo">
+							<img src="{{ item.img | default('speaker-placeholder.jpg') | img_asset }}" alt="Фото спикера">
+						</div>
 						<div class="speaker__info">
 							<div class="speaker__name">{{item.name}}</div>
 							<div class="speaker__function">{{item.function}}</div>
-							<div class="speaker__subject">{{item.subject}}</div>
+							{% for subject in item.subjects.slice(0, 1) %}
+								<div class="speaker__subject">{{subject.title}}</div>
+							{% endfor %}
 						</div>
 					</div>
 				{% endfor %}
@@ -103,7 +98,7 @@
 	</section>
 	<section class="section">
 		<div class="container container--relative">
-			<section class="partners">
+			<section class="partners" id="partners">
 				<h2 class="title">Партнерские решения</h2>
 				<div class="slider">
 					{% for item in common.data.partners %}
@@ -123,9 +118,9 @@
 	</section>
 	<section class="section section--bg-blue section--bg-profits">
 		<div class="container">
-			<div class="profits">
-				<div class="profits__wrapper">
-					<p class="profits__text">Онлайн-конференция «Бизнес.IoT» даст эффективный стимул преобразованию вашего бизнеса, созданию новых решений и сервисов. Присоединяйтесь!</p>
+			<div class="registration" id="registration">
+				<div class="registration__wrapper">
+					<p class="registration__text">Онлайн-конференция «Бизнес.IoT» даст эффективный стимул преобразованию вашего бизнеса, созданию новых решений и сервисов. Присоединяйтесь!</p>
 					<a href="#" class="btn">Регистрация</a>
 				</div>
 			</div>

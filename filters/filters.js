@@ -19,6 +19,44 @@ function getAssetPath (p, dist = '') {
 	return result;
 }  
 
+function getSchedule (src, data) {
+	let store = {};
+	data.forEach(n => {
+		store[n.id] = n;
+	});
+	src.forEach(n => {
+		n.subjects.forEach(j => {
+			if (j.speakers) {
+				j.speakers = j.speakers.map(k => store[k] || null);
+			}
+		})
+	});
+	return src;
+}
+
+function getSubjects (speakers, schedule) {
+	let store = [];
+	schedule.forEach(el => {
+		el.subjects.forEach(n => {
+			if (n.speakers) {
+				n.speakers.forEach(j => {
+					store.push({
+						speakerId: j.id,
+						title: n.shorttext || n.text
+					});
+				});
+			};
+		});
+	});
+
+	speakers.map(speaker => {
+		speaker.subjects = store.filter(el => {
+			return el.speakerId === speaker.id;
+		})
+	})
+	return speakers;
+}
+
 function getDPEPath (name, folder) {
 	let result = "";
 
@@ -78,7 +116,8 @@ const filters = {
 			}
 		}
 	},
-
+	populate: (schedule, speakers) => getSchedule(schedule, speakers),
+	populate_speakers: (speakers, schedule) => getSubjects(speakers, schedule),
 	asset: path => getAssetPath(path),
 	img_asset: path => getAssetPath(path, 'images/'),
 	uploads: path => getAssetPath(path, 'uploads/'),
