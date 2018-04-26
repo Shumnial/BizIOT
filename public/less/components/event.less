@@ -2,22 +2,22 @@
 
 	&__line {
 		position: absolute;
-		top: 10px;
+		top: 30px;
 		left: 210px;
 		width: 1px;
-		height: 100%;
 		background-color: #afb8bf;
+		bottom: -10px;
+		
 
 		&::before {
 			position: absolute;
-			top: 0px;
+			top: -20px;
 			left: -10px;
 			content: '';
 			width: 21px;
 			height: 21px;
 			border: 1px solid #afb8bf;
 			border-radius: 50%;
-			background-color: #0c1c2f;
 		}
 	}
 
@@ -33,69 +33,54 @@
 		}
 	}
 
+	&__wrapper {
+		width: 70%;
+	}
+
 	&__time {
 		font-size: 30px;
 		color: @blue;
-		flex-basis: 25%;
-		margin-right: auto;
+		flex-basis: 30%;
 	}
 
 	&__info {
+		width: 50%;
+		display: table-cell;
 		cursor: pointer;
-		margin-right: auto;
+
+		&:not(:only-child) {
+			padding-right: 10px;
+		}
 
 		&--pro {
-			display: flex;
-			flex-wrap: wrap;
-			align-content: space-between;
-
+			color: @blue;
+			font-style: italic;
 		}
 
-		&--col-one {
-			flex-basis: 68%;
-		}
-
-		&--col-two {
-			flex-basis: 33%;
-
-			&:nth-child(2) {
-			margin-right: auto;
-			}
+		&:nth-child(2n) {
+			padding-left: 10px;
+			padding-right: 0;
 		}
 	}
 
 	&__subject {
-		min-height: 50%;
+		display: table-row;
 		font-size: 20px;
-		margin-bottom: 10px;
 
 		&--font-size {
 			font-size: 26px;
 		}
-
-		&--pro {
-			width: 100%;
-			color: @blue;
-			font-style: italic;
-
-			span {
-				font-weight: 700;
-			}
-		}
 	}
 
 	&__speaker {
-		flex-basis: 100%;
+		display: table-row;
 		font-size: 16px;
 		color: #aeafcc;
 
+		
+
 		&--font-size {
 			font-size: 18px;
-		}
-
-		&--pro {
-			color: #6f7aad;
-			font-style: italic;
 		}
 	}
 
@@ -106,19 +91,15 @@
 
 		&__time {
 			padding-left: 15px;
-			flex-basis: 10%;
+			flex-basis: 20%;
 		}
 	}
 
-	@media (max-width: 640px) {
+	@media (max-width: @screen-sm) {
 		&__time {
 			font-size: 26px;
-		}
-
-		&__info {
-			&--col-two {
-				flex-basis: 30%;
-			}
+			flex-basis: 10%;
+			margin-right: 5%;
 		}
 
 		&__subject {

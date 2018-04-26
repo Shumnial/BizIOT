@@ -42,7 +42,8 @@ function getSubjects (speakers, schedule) {
 				n.speakers.forEach(j => {
 					store.push({
 						speakerId: j.id,
-						title: n.shorttext || n.text
+						title: n.shorttext || n.text,
+						subjectId: n.subjectId
 					});
 				});
 			};

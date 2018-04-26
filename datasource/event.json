@@ -3,8 +3,10 @@
 		"time": "10:00 — 11:15",
 		"subjects": [
 			{
+				"subjectId": "6e0e66f8aa6e4b07b3369cb498ed86cb",
 				"text": "Интернет вещей в действии: мировая и российская практика",
-				"about": "Раз",
+				"shorttext": "Интернет вещей в действии: мировая и российская практика. Реалии, тренды, перспективы",
+				"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi error magnam animi aperiam autem ipsum, dignissimos quaerat quasi odit, unde earum non, delectus ea doloribus. Adipisci a tenetur iusto eligendi.",
 				"speakers": ["d-marchenko"]
 			}
 		]
@@ -13,21 +15,25 @@
 		"time": "11:15 — 11:30",
 		"subjects": [
 			{
+				"subjectId": "a6e17d02edb24c5faf1efae8307b7cab",
 				"text": "Интернет вещей и анализ данных. Международные проекты КПМГ.",
-				"about": "Два",
+				"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptatem pariatur tempore cum nihil qui laboriosam exercitationem rerum blanditiis magnam, quas assumenda, ad at perspiciatis. Maxime ipsa in veritatis laborum.",
 				"speakers": ["v-esipov"]
 			}
 		]
 	},
 	{
+		"pro": true,
 		"time": "11:30 — 11:40",
 		"subjects": [
 			{
+				"subjectId": "f1ad03c7197d4ad5b3b8cd8eabeb54a1",
 				"text": "Трек PRO.Бизнес<br>Ищете возможности роста для своего бизнеса? Нужны инновационные, но проверенные решения? Данный трек – про это. Бизнес, новые идеи, сценарии и решения, практика применения и результаты – в различных отраслях",
 				"shorttext": "PRO.Бизнес и Интернет Вещей: ключевые выводы и дальнейшие действия",
 				"speakers": ["a-kulashova"]
 			},
 			{
+				"subjectId": "3c8562eea95142e4bf6425f441d66c88",
 				"text": "Трек PRO.Технологии<br>Есть идея, но нет понимания как ее реализовать? Нужен совет во выбору инструментов, архитектуре и необходимым компонентам? Этот трек для вас. Технологическая платформа Microsoft, компонентная база и услуги наших партнеров, программы инкубации решений – все для быстрого запуска проекта",
 				"shorttext": "PRO.Технологии и Интернет Вещей: ключевые выводы и дальнейшие действия",
 				"speakers": ["m-chernomordikov"]
@@ -38,10 +44,12 @@
 		"time": "11:40 — 12:00",
 		"subjects": [
 			{
+				"subjectId": "49aafd2a537346d0b34bb4bc0a15e3b0",
 				"text": "Облачный сервис ритейл-аналитики на базе видеонаблюдения",
 				"speakers": ["d-bergelson"]
 			},
 			{
+				"subjectId": "fa56041c1ede43bfbe38f5caf7afc6e0",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -51,10 +59,12 @@
 		"time": "12:00 — 12:20",
 		"subjects": [
 			{
+				"subjectId": "d1bcb96f47ab40129c399612256f11ed",
 				"text": "Прогнозирование производства на базе машинного обучения",
 				"speakers": ["a-glytenko", "a-doronin"]
 			},
 			{
+				"subjectId": "28ee396a78504a98af6c4af22d859030",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -64,10 +74,12 @@
 		"time": "12:20 — 12:40",
 		"subjects": [
 			{
+				"subjectId": "0c96b08a7d9d48739d20d2e21ddaffc6",
 				"text": "Сервисная платформа kSense:  от сбора данных к достоверным прогнозам и оценкам рисков",
 				"speakers": ["a-kuznecov", "v-milykh"]
 			},
 			{
+				"subjectId": "4ed78fc0812945f5939b8fc9e7086f99",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -77,10 +89,12 @@
 		"time": "12:40 — 13:00",
 		"subjects": [
 			{
+				"subjectId": "356cecc268504d8880ba919a09dbc308",
 				"text": "Мониторинг торгового оборудования",
 				"speakers": ["a-meluzov"]
 			},
 			{
+				"subjectId": "a0e6bb8ddd6a418db41446cc24832d6a",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -90,10 +104,12 @@
 		"time": "13:00 — 13:20",
 		"subjects": [
 			{
+				"subjectId": "c7f5a07a0e924157aff014525c1ffdac",
 				"text": "Розничные магазины. Повышаем эффективность вместе с технологиями Microsoft",
 				"speakers": ["s-osipov", "k-abramov"]
 			},
 			{
+				"subjectId": "f2155294a11c48da9b9bd279759a582f",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -103,10 +119,12 @@
 		"time": "13:20 — 13:40",
 		"subjects": [
 			{
+				"subjectId": "4cbe81ea7c4f45d2bcec6d686cc1e146",
 				"text": "Управление энергоресурсами зданий",
 				"speakers": ["l-koroleva"]
 			},
 			{
+				"subjectId": "7a3074c34d0d413b9e4dd40af3fdcdcd",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -116,10 +134,12 @@
 		"time": "13:40 — 14:00",
 		"subjects": [
 			{
+				"subjectId": "05d0f546285b4ddc948b052d9d794371",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			},
 			{
+				"subjectId": "c0da73ef1c064715b8677ddedd1ce292",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -129,10 +149,12 @@
 		"time": "14:00 — 14:20",
 		"subjects": [
 			{
+				"subjectId": "25d22addcd5c40db8fa08d1e02ea8c0e",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			},
 			{
+				"subjectId": "931ca9e4adeb494da89aa888b782c10c",
 				"text": "Тема и докладчики уточняются",
 				"speakers": null
 			}
@@ -143,10 +165,12 @@
 		"time": "14:20 — 14:30",
 		"subjects": [
 			{
+				"subjectId": "68081a5bc2284cd09407717032630e12",
 				"text": "PRO.Бизнес и Интернет Вещей: ключевые выводы и дальнейшие действия",
 				"speakers": ["a-kulashova"]
 			},
 			{
+				"subjectId": "b3449aeae36f43269bda3c4b065bc2de",
 				"text": "PRO.Технологии и Интернет Вещей: ключевые выводы и дальнейшие действия",
 				"speakers": ["m-chernomordikov"]
 			}

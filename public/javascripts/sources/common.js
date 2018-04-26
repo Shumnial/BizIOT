@@ -33,37 +33,15 @@ $(function () {
     }
   }]});
 
-	let speakers = [
-	{
-		"title": "Бизнес-аналитика: IoT of Mobile / 45 минут",
-		"subject": "Оперативная аналитика в реальном времени",
-		"info": "Технология  представляет оперативную аналитику в реальном времени — возможность решать задачи подготовки аналитических отчетов на экземпляре, выполняющем работу класса OLTP. Это не только упрощает конфигурацию, но и позволяет обойтись без средств загрузки данных (ETL) и хранилища. В предлагаемой сессии мы рассмотрим новые возможности технологии и расскажем о внутренних механизмах реализации оперативной аналитики.",
-		"img": "d-artemov.jpg",
-		"name": "Дмитрий Артемов",
-		"function": "Ведущий консультант российской практики Microsoft Consulting Services, Microsoft, Россия",
-		"about": [
-		{
-			"info": "Ведущий консультант российской практики Microsoft Consulting Services. Специализируется на анализе и оптимизации производительности информационных систем на базе Microsoft SQL Server (с версии 6.0)."
-		},
-		{
-			"info": "Автор трех книг на тему администрирования SQL Server и ряда журнальных публикаций в российских и зарубежных изданиях."
-		},
-		{
-			"info": "Регулярно выступает на конференциях различного уровня."
-		}]
-	},
-	{
-		"title": "Lorem Ipsum",
-		"subject": "Lorem Ipsum",
-		"info": "Lorem Ipsum",
-		"name": "Lorem Ipsum",
-		"function": "Lorem Ipsum"
-	}
-];
-
 	function onEventInfoClick() {
-		$(this).find('.popup').show();
+		let index = $(this).index('.event__subject');
+		$('.popup').eq(index).show();
 	};
+
+	function onSpeakerSubjectClick() {
+		let id = $(this).attr('data-id');
+		$(`.popup[data-id = ${id}]`).show();
+	}
 
 	function popupClose () {
 		$('.popup').hide();
@@ -81,8 +59,26 @@ $(function () {
 		}
 	}
 
-	$('.event__info').on('click', onEventInfoClick);
+	const headerCoords = $('.header__down').offset().top;
+	function onScroll () {
+		const target = $('.header__down');
+		if ($(window).scrollTop() >= headerCoords) {
+			target.css('position', 'fixed');
+			target.css('top', '0');
+		} else {
+			target.css('position', 'static');
+		}
+	};
+
+	function onEventHover() {
+
+	};
+
+	$('event__item').on('hover', onEventHover);
+	$('.speaker__subject').on('click', onSpeakerSubjectClick);
+	$('.event__subject').on('click', onEventInfoClick);
 	$(document).on('click', '.popup__close', popupClose);
 	$(document).on('click', '.popup', onOverlayClick);
 	$(document).on('keydown', onEscPress);
+	$(document).on('scroll', onScroll);
 })

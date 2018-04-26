@@ -36,39 +36,27 @@
 				<h2 class="title">Программа</h2>
 				<h3 class="program__subtitle">Пленарная сессия 30 марта 2017</h3>
 				<div class="event">
-
+					
 					{% for item in event | populate(speakers) %}
 					<div class="event__item {% if item.lead %}event__item--pro{% endif %}">
 						<div class="event__line"></div>
 						<div class="event__time">{{item.time}}</div>
-						{% for subjects in item.subjects %}
-						<div class="event__info {% if loop.length > 1  %}event__info--col-two{% endif %}">
-							<div class="event__subject">{{subjects.text}}</div>
-							{% for one in subjects.speakers %}
-							<div class="event__speaker">{% if one.name %}{{one.name + ', '}}{% else %}[  –  ]{% endif %}{{one.function}}</div>
-
-							<div class="popup">
-								<div class="popup__inner">
-									<h2 class="popup__subject">{{subjects.text}}</h2>
-									<p class="popup__info">{{subjects.about}}</p>
-									<a class="popup__watch" href="#">Смотреть доклад</a>
-									<div class="popup__speaker">
-										<div class="popup__speaker-photo">
-											<img src="{{ one.img | default('speaker-placeholder.jpg') | img_asset }}">
-										</div>
-										<p class="popup__speaker-function">{{one.function}}</p>
-										<p class="popup__speaker-name">{{one.name}}</p>
-									</div>
-									<span class="popup__close"></span>
-								</div>
+						<div class="event__wrapper">
+							{% for subject in item.subjects %}
+							<div class="event__info {% if item.pro %}event__info--pro{% endif %}">
+								<div class="event__subject">{{subject.text}}</div>
+								{% if subject.speakers %}
+								{% for speaker in subject.speakers %}
+								<div class="event__speaker">{{speaker.name + ', ' + speaker.function}}</div>
+								{% endfor %}
+								{% else %}
+								<div class="event__speaker"><pre>[  –  ]</pre></div>
+								{% endif %}
 							</div>
-
 							{% endfor %}
 						</div>
-						{% endfor %}
 					</div>
 					{% endfor %}
-
 				</div>
 			</div>
 		</div>
@@ -87,7 +75,7 @@
 							<div class="speaker__name">{{item.name}}</div>
 							<div class="speaker__function">{{item.function}}</div>
 							{% for subject in item.subjects.slice(0, 1) %}
-								<div class="speaker__subject">{{subject.title}}</div>
+								<div class="speaker__subject" data-id="{{subject.subjectId}}">{{subject.title}}</div>
 							{% endfor %}
 						</div>
 					</div>
@@ -127,4 +115,25 @@
 		</div>
 	</section>
 </main>
+{% for item in event %}
+{% for subject in item.subjects %}
+<div class="popup" data-id="{{subject.subjectId}}">
+	<div class="popup__inner">
+		<h2 class="popup__subject">{{subject.text}}</h2>
+		<p class="popup__info">{{subject.about}}</p>
+    <a class="popup__watch" href="#">Смотреть доклад</a>
+    {% for speaker in subject.speakers %}
+    <div class="popup__speaker">
+      <div class="popup__speaker-photo">
+        <img src="{{ speaker.img | default('speaker-placeholder.jpg') | img_asset }}">
+      </div>
+      <p class="popup__speaker-function">{{speaker.function}}</p>
+      <p class="popup__speaker-name">{{speaker.name}}</p>
+    </div>
+    {% endfor %}
+    <span class="popup__close"></span>
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
 {% endblock %}
