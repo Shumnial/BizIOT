@@ -10,6 +10,10 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+
+		@media (max-width: @screen-sm) {
+			background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.4) 90%, transparent 100%), url('../images/intro-bg.jpg');
+		}
 	}
 
 	&--bg-profits {
