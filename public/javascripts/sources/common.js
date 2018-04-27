@@ -1,4 +1,5 @@
 $(function () {
+
 	$('.slider').slick({
 		dots: true,
 		infinite: false,
@@ -35,28 +36,12 @@ $(function () {
 
 	function onEventInfoClick() {
 		let index = $(this).index('.event__info');
-		$('.popup').eq(index).show();
+		$('.popup').eq(index).arcticmodal();
 	};
 
 	function onSpeakerSubjectClick() {
 		let id = $(this).attr('data-id');
-		$(`.popup[data-id = ${id}]`).show();
-	}
-
-	function popupClose () {
-		$('.popup').hide();
-	};
-
-	function onEscPress (evt) {
-		if (evt.keyCode === 27) {
-			popupClose();
-		}
-	};
-
-	function onOverlayClick (evt) {
-		if ($(evt.target).hasClass('popup')) {
-			popupClose();
-		}
+		$(`.popup[data-id = ${id}]`).arcticmodal();
 	}
 
 	const headerCoords = $('.header__down').offset().top;
@@ -72,8 +57,5 @@ $(function () {
 
 	$('.event__info').on('click', onEventInfoClick);
 	$('.speaker__subject').on('click', onSpeakerSubjectClick);
-	$(document).on('click', '.popup__close', popupClose);
-	$(document).on('click', '.popup', onOverlayClick);
-	$(document).on('keydown', onEscPress);
 	$(document).on('scroll', onScroll);
 })

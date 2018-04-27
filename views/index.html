@@ -115,28 +115,30 @@
 		</div>
 	</section>
 </main>
-{% for item in event %}
-{% for subject in item.subjects %}
-<div class="popup" data-id="{{subject.subjectId}}">
-	<div class="popup__inner">
-		<h2 class="popup__subject">{{subject.text}}</h2>
-		<p class="popup__info">{{subject.about}}</p>
-    <a class="popup__watch" href="#">Смотреть доклад</a>
-    {% for speaker in subject.speakers %}
-    <div class="popup__speaker">
-      <div class="popup__speaker-photo">
-        <img src="{{ speaker.img | default('speaker-placeholder.jpg') | img_asset }}">
+<div style="display: none">
+	<div id="modal">
+		{% for item in event %}
+		{% for subject in item.subjects %}
+		<div class="popup" data-id="{{subject.subjectId}}">
+			<h2 class="popup__subject">{{subject.text}}</h2>
+			<p class="popup__info">{{subject.about}}</p>
+			<a class="popup__watch" href="#">Смотреть доклад</a>
+			{% for speaker in subject.speakers %}
+			<div class="popup__speaker">
+				<div class="popup__speaker-photo">
+					<img src="{{ speaker.img | default('speaker-placeholder.jpg') | img_asset }}">
+				</div>
+				<p class="popup__speaker-function">{{speaker.function}}</p>
+      	<p class="popup__speaker-name">{{speaker.name}}</p>
+      	{% for aboutSpeaker in speaker.about %}
+      	<p class="popup__speaker-info">{{aboutSpeaker}}</p>
+      	{% endfor %}
       </div>
-      <p class="popup__speaker-function">{{speaker.function}}</p>
-      <p class="popup__speaker-name">{{speaker.name}}</p>
-      {% for aboutSpeaker in speaker.about %}
-      <p class="popup__speaker-info">{{aboutSpeaker}}</p>
       {% endfor %}
+      <span class="popup__close arcticmodal-close"></span>
     </div>
     {% endfor %}
-    <span class="popup__close"></span>
+    {% endfor %}
   </div>
 </div>
-{% endfor %}
-{% endfor %}
 {% endblock %}
