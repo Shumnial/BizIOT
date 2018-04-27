@@ -22,7 +22,8 @@ $(function () {
   	settings: {
   		slidesToShow: 2,
   		slidesToScroll: 2,
-  		arrows: false
+  		dots: false,
+  		arrows: true
   	}
   },
   {
@@ -30,7 +31,7 @@ $(function () {
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false
+      arrows: true
     }
   }]});
 
