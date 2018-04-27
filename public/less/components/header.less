@@ -264,11 +264,10 @@
 		&__down {
 			flex-direction: column;
 			padding: 0 15px;
-		}
-
-		a {
-			font-size: 14px;
-			line-height: 48px;
+			a {
+				font-size: 14px;
+				line-height: 48px;
+			}
 		}
 
 		&-title {
@@ -276,10 +275,22 @@
 		}
 	}
 
+	@media (max-width: 600px) {
+		&__down {
+			display: none;
+		}
+	}
+
 	@media (max-width: 540px) {
+
+		&__logo {
+			line-height: 30px;
+		}
+
 		&__up {
 			.header__item {
-
+				min-width: 160px;
+				
 				&::after {
 				right: 10px;
 				top: 2px;
