@@ -34,7 +34,7 @@ $(function () {
   }]});
 
 	function onEventInfoClick() {
-		let index = $(this).index('.event__subject');
+		let index = $(this).index('.event__info');
 		$('.popup').eq(index).show();
 	};
 
@@ -70,13 +70,8 @@ $(function () {
 		}
 	};
 
-	function onEventHover() {
-
-	};
-
-	$('event__item').on('hover', onEventHover);
+	$('.event__info').on('click', onEventInfoClick);
 	$('.speaker__subject').on('click', onSpeakerSubjectClick);
-	$('.event__subject').on('click', onEventInfoClick);
 	$(document).on('click', '.popup__close', popupClose);
 	$(document).on('click', '.popup', onOverlayClick);
 	$(document).on('keydown', onEscPress);

@@ -925,14 +925,11 @@ a {
 }
 @media (max-width: 480px) {
   .btn {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .section {
   padding: 20px 0;
-}
-.section__content {
-  max-width: 33%;
 }
 .section--bg-blue {
   background-color: #002e4b;
@@ -947,11 +944,6 @@ a {
   background-image: url('/images/profits-bg.png');
   background-repeat: no-repeat;
   background-position: top 35% left 70%;
-}
-@media (max-width: 768px) {
-  .section__content {
-    max-width: 60%;
-  }
 }
 .subjects {
   display: -ms-flexbox;
@@ -979,6 +971,7 @@ a {
   padding-top: 100px;
   background-position: top;
   background-repeat: no-repeat;
+  max-width: 33%;
 }
 .subjects__item:nth-child(1) {
   background-image: url('/images/subjects/subjects1.png');
@@ -990,8 +983,7 @@ a {
   background-image: url('/images/subjects/subjects3.png');
 }
 .subjects__text {
-  width: 100%;
-  min-height: 96px;
+  margin-bottom: 10px;
 }
 .subjects__link {
   font-size: 18px;
@@ -1004,11 +996,19 @@ a {
     -ms-flex-align: center;
         align-items: center;
   }
+  .subjects__item {
+    max-width: 70%;
+  }
   .subjects__item:not(:last-child) {
     margin-bottom: 40px;
   }
   .subjects__text {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .subjects__item {
+    max-width: 100%;
   }
 }
 .intro {
@@ -1267,13 +1267,16 @@ a {
         align-items: flex-start;
     padding: 0 15px;
   }
+  .header__up .header__list {
+    font-size: 15px;
+  }
   .header__down {
     -ms-flex-direction: column;
         flex-direction: column;
     padding: 0 15px;
   }
-  .header__down a {
-    font-size: 14px;
+  .header__down .header__link {
+    font-size: 15px;
     line-height: 48px;
   }
   .header-title {
@@ -1664,6 +1667,10 @@ a {
 .event__item:last-child .event__line {
   height: 0;
 }
+.event__item:hover .event__line::before {
+  background-color: #00bcf2;
+  transition: hover, 0.3s;
+}
 .event__wrapper {
   width: 70%;
   display: -ms-flexbox;
@@ -1685,6 +1692,10 @@ a {
       flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  cursor: pointer;
+}
+.event__info:hover {
+  color: #00bcf2;
 }
 .event__info:not(:only-child) {
   margin-right: 15px;
@@ -1699,10 +1710,6 @@ a {
 .event__subject {
   font-size: 20px;
   margin-bottom: 5px;
-  cursor: pointer;
-}
-.event__subject:hover {
-  color: #00bcf2;
 }
 .event__subject--font-size {
   font-size: 26px;
@@ -1958,10 +1965,10 @@ a {
 }
 @media (max-width: 480px) {
   .popup__subject {
-    font-size: 20px;
+    font-size: 18px;
   }
   .popup__speaker-name {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .clearfix:before,

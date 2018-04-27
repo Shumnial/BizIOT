@@ -7,7 +7,6 @@
 		width: 1px;
 		background-color: #afb8bf;
 		bottom: -10px;
-		
 
 		&::before {
 			position: absolute;
@@ -27,9 +26,15 @@
 		padding-bottom: 40px;
 
 		&:last-child {
+
 			.event__line {
 				height: 0;
 			}
+		}
+
+		&:hover .event__line::before {
+			background-color: @blue;
+			transition: hover, 0.3s;
 		}
 	}
 
@@ -50,6 +55,11 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		cursor: pointer;
+
+		&:hover {
+			color: @blue;
+		}
 
 		&:not(:only-child) {
 			margin-right: 15px;
@@ -68,11 +78,6 @@
 	&__subject {
 		font-size: 20px;
 		margin-bottom: 5px;
-		cursor: pointer;
-
-		&:hover {
-			color: @blue;
-		}
 
 		&--font-size {
 			font-size: 26px;

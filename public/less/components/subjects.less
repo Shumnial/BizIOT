@@ -17,6 +17,7 @@
 		padding-top: 100px;
 		background-position: top;
 		background-repeat: no-repeat;
+		max-width: 33%;
 
 		&:nth-child(1) {
 			background-image: url('/images/subjects/subjects1.png');
@@ -32,8 +33,7 @@
 	}
 
 	&__text {
-		width: 100%;
-		min-height: 96px;
+		margin-bottom: 10px;
 	}
 
 	&__link {
@@ -45,12 +45,23 @@
 		flex-direction: column;
 		align-items: center;
 
+		&__item {
+			max-width: 70%;
+		}
+
 		&__item:not(:last-child) {
 			margin-bottom: 40px;
 		}
 
 		&__text {
 			margin-bottom: 15px;
+		}
+	}
+
+	@media (max-width: @screen-xs) {
+		
+		&__item {
+			max-width: 100%;
 		}
 	}
 }
