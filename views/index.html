@@ -129,6 +129,9 @@
       </div>
       <p class="popup__speaker-function">{{speaker.function}}</p>
       <p class="popup__speaker-name">{{speaker.name}}</p>
+      {% for aboutSpeaker in speaker.about %}
+      <p class="popup__speaker-info">{{aboutSpeaker}}</p>
+      {% endfor %}
     </div>
     {% endfor %}
     <span class="popup__close"></span>

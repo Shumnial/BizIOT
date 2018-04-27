@@ -6,7 +6,7 @@
 				"subjectId": "6e0e66f8aa6e4b07b3369cb498ed86cb",
 				"text": "Интернет вещей в действии: мировая и российская практика",
 				"shorttext": "Интернет вещей в действии: мировая и российская практика. Реалии, тренды, перспективы",
-				"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi error magnam animi aperiam autem ipsum, dignissimos quaerat quasi odit, unde earum non, delectus ea doloribus. Adipisci a tenetur iusto eligendi.",
+				"about": null,
 				"speakers": ["d-marchenko"]
 			}
 		]
@@ -17,7 +17,6 @@
 			{
 				"subjectId": "a6e17d02edb24c5faf1efae8307b7cab",
 				"text": "Интернет вещей и анализ данных. Международные проекты КПМГ.",
-				"about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptatem pariatur tempore cum nihil qui laboriosam exercitationem rerum blanditiis magnam, quas assumenda, ad at perspiciatis. Maxime ipsa in veritatis laborum.",
 				"speakers": ["v-esipov"]
 			}
 		]

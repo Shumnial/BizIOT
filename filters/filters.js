@@ -43,7 +43,8 @@ function getSubjects (speakers, schedule) {
 					store.push({
 						speakerId: j.id,
 						title: n.shorttext || n.text,
-						subjectId: n.subjectId
+						subjectId: n.subjectId,
+						about: n.about
 					});
 				});
 			};

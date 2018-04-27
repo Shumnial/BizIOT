@@ -3,7 +3,8 @@
 		"id": "s-osipov",
 		"img": "s-osipov.jpg",
 		"name": "Сергей Осипов",
-		"function": "Вице-президент MAYKOR-GMCS"
+		"function": "Вице-президент MAYKOR-GMCS",
+		"about": null
 	},
 	{
 		"id": "m-chernomordikov",
